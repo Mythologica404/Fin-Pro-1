@@ -1,0 +1,28 @@
+{
+  "name": "fin-pro-1",
+  "version": "1.0.0",
+  "description": "Final Project 1 Hacktiv8",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-db": "node migrations/createTable.js",
+    "drop-db": "node migrations/dropTable.js"
+  },
+  "author": "Kelompok8Hacktiv8",
+  "license": "ISC",
+  "dependencies": {
+    "bcrpyt": "^2.0.0",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
