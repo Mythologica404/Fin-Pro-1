@@ -10,7 +10,6 @@ export const addReflection = async (
   try {
     const date = new Date();
 
-    const user = await getUserByID(owner_id);
     const query = await db.query(
       `INSERT INTO reflections (owner_id, success, low_point, take_away, created_date, modified_date) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *;`,
       [owner_id, success, low_point, take_away, date, date]
