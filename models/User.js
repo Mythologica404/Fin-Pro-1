@@ -27,7 +27,7 @@ export const login = async (email, password) => {
         delete res.password;
         return { status: 200, res };
       } else {
-        return { status: "error", message: "password doens't match" };
+        return { status: 401, message: "password doens't match" };
       }
     } else {
       return { status: 404, message: "User not Found" };

@@ -109,16 +109,21 @@ This is an example of how to list things you need to use the software and how to
 </div>
 - Error Response: <b>500</b>
 <div align="center">
-    <img src="readme/Register1.jpg" alt="Screenshoot" height="500px" >
+    <img src="readme/Register2.jpg" alt="Screenshoot" height="500px" >
 </div>
+
+`Login`
+
+- URL: /api/v1/users/login
+- Method: GET
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Anggota Kelompok
 
-<a href="https://github.com/Dani27-design"><b>Muhammad Daniansyah Chusyaidin</b></a><br>
-<a href="https://github.com/Mythologica404"><b>Muhammad Rizky Saputra</b></a><br>
-<a href="https://github.com/aenq"><b>Rachel Marta Maria</b></a><br>
+<a href="https://github.com/Dani27-design"><b>Muhammad Daniansyah Chusyaidin</b></a> - INJS-KS04-023<br>
+<a href="https://github.com/Mythologica404"><b>Muhammad Rizky Saputra</b></a> - INJS-KS04-011<br>
+<a href="https://github.com/aenq"><b>Rachel Marta Maria</b></a> - INJS-KS04-020<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
