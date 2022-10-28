@@ -1,5 +1,4 @@
 import db from "../config/db.js";
-import { getUserByID } from "./User.js";
 
 export const addReflection = async (
   owner_id,
@@ -15,9 +14,9 @@ export const addReflection = async (
       [owner_id, success, low_point, take_away, date, date]
     );
     const res = query?.rows[0];
-    return { status: "success", res };
+    return { status: 201, res };
   } catch (error) {
-    return { status: "error", message: error.message };
+    return { status: 500, message: "Internal Server Error" };
   }
 };
 
@@ -27,11 +26,10 @@ export const getAllReflections = async (owner_id) => {
       `SELECT * FROM reflections WHERE owner_id = $1`,
       [owner_id]
     );
-    const resCount = query?.rowCount;
     const res = query?.rows;
-    return { status: "success", count: resCount, res };
+    return { status: 200, res };
   } catch (error) {
-    return { status: "error", message: error.message };
+    return { status: 500, message: "Internal Server Error" };
   }
 };
 
@@ -49,7 +47,7 @@ export const editReflection = async (
     );
 
     if (check?.rowCount === 0) {
-      return { status: "error", message: "Reflection doesn't exist" };
+      return { status: 404, message: "Reflection doesn't exist" };
     }
 
     if (check?.rows[0].owner_id === owner_id) {
@@ -59,12 +57,12 @@ export const editReflection = async (
         [success, low_point, take_away, date, id]
       );
       const res = query?.rows[0];
-      return { status: "success", res };
+      return { status: 200, res };
     } else {
-      return { status: "error", message: "Reflection is not yours" };
+      return { status: 403, message: "Reflection is not yours" };
     }
   } catch (error) {
-    return { status: "error", message: error.message };
+    return { status: 500, message: "Internal Server Error" };
   }
 };
 
@@ -75,7 +73,7 @@ export const deleteReflection = async (id, owner_id) => {
       [id]
     );
     if (check?.rowCount === 0) {
-      return { status: "error", message: "Reflection doesn't exist" };
+      return { status: 404, message: "Reflection doesn't exist" };
     }
 
     if (check?.rows[0].owner_id === owner_id) {
@@ -85,11 +83,11 @@ export const deleteReflection = async (id, owner_id) => {
       );
       const res = query?.rows[0];
 
-      return { status: "success", res };
+      return { status: 200, res };
     } else {
-      return { status: "error", message: "Reflection is not yours" };
+      return { status: 403, message: "Reflection is not yours" };
     }
   } catch (error) {
-    return { status: "error", message: error.message };
+    return { status: 500, message: "Internal Server Error" };
   }
 };

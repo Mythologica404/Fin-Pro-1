@@ -5,7 +5,7 @@ import { register, login } from "../models/User.js";
 export const userRegister = async (req, res) => {
   const { email, password } = req.body;
   register(email, password).then((data) => {
-    res.json(data);
+    res.status(data.status).json({ result: data.res, message: data.message });
   });
 };
 
@@ -15,9 +15,11 @@ export const userLogin = async (req, res) => {
     if (data.status !== "error") {
       const payload = data?.res;
       const token = jwt.sign({ ...payload }, JWT_Secret, { expiresIn: "24h" });
-      res.json({ ...data, token: token });
+      res
+        .status(data.status)
+        .json({ result: data.res, token: token, message: data.message });
     } else {
-      res.json(data);
+      res.status(data.status).json({ result: data.res, message: data.message });
     }
   });
 };

@@ -8,9 +8,9 @@ export const register = async (email, password) => {
     );
     const res = query?.rows[0];
     delete res.password;
-    return { status: "success", res };
+    return { status: 201, res };
   } catch (error) {
-    return { status: "error", message: error.message };
+    return { status: 500, message: "Internal Server Error" };
   }
 };
 
@@ -25,28 +25,14 @@ export const login = async (email, password) => {
       const res = query?.rows[0];
       if (password === res.password) {
         delete res.password;
-        return { status: "success", res };
+        return { status: 200, res };
       } else {
         return { status: "error", message: "password doens't match" };
       }
     } else {
-      return { status: "error", message: "user not found" };
+      return { status: 404, message: "User not Found" };
     }
   } catch (error) {
-    return { status: "error", message: error.message };
-  }
-};
-
-export const getUserByID = async (id) => {
-  try {
-    const query = db.query(`SELECT id, email FROM users WHERE id = $1`, [id]);
-    if (query?.rowCount > 0) {
-      const res = query?.rows[0];
-      return { id: res.id, email: res.email };
-    } else {
-      return { status: "error", message: "user doesn't exist" };
-    }
-  } catch (error) {
-    return { status: "error", message: error.message };
+    return { status: 500, message: "Internal Server Error" };
   }
 };

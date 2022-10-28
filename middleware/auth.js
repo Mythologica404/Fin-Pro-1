@@ -6,8 +6,7 @@ const authentication = async (req, res, next) => {
   const { authorization } = req.headers;
   try {
     if (!authorization) {
-      res.json({
-        status: "error",
+      res.status(403).json({
         message: "Failed to access this, Your credentials not valid.",
       });
       return;
@@ -28,8 +27,7 @@ const authentication = async (req, res, next) => {
       };
       next();
     } else {
-      res.json({
-        status: "error",
+      res.status(401).json({
         message: "Authentication failed",
       });
     }
