@@ -57,7 +57,7 @@ export const editReflection = async (
         [success, low_point, take_away, date, id]
       );
       const res = query?.rows[0];
-      return { status: 200, res };
+      return { status: 201, res };
     } else {
       return { status: 403, message: "Reflection is not yours" };
     }
