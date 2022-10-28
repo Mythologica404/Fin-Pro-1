@@ -126,8 +126,94 @@ This is an example of how to list things you need to use the software and how to
 </div>
 - Error Response: <b>500</b>
 <div align="center">
-    <img src="readme/Register2.jpg" alt="Screenshoot" height="500px" >
+    <img src="readme/Login3.jpg" alt="Screenshoot" height="500px" >
 </div>
+
+`Add Reflection`
+
+- URL: /api/v1/reflections
+- Method: POST
+- Success Response: <b>201</b>
+<div align="center">
+    <img src="readme/AddReflection1.jpg" alt="Screenshoot" height="500px" >
+</div>
+- Error Response: <b>401</b>
+<div align="center">
+    <img src="readme/AddReflection2.jpg" alt="Screenshoot" height="500px" >
+</div>
+- Error Response: <b>500</b>
+<div align="center">
+    <img src="readme/AddReflection3.jpg" alt="Screenshoot" height="500px" >
+</div>
+
+`Get All User's Reflection`
+
+- URL: /api/v1/reflections
+- Method: GET
+- Success Response: <b>200</b>
+<div align="center">
+    <img src="readme/GetReflection1.jpg" alt="Screenshoot" height="500px" >
+</div>
+- Error Response: <b>401</b>
+<div align="center">
+    <img src="readme/GetReflection2.jpg" alt="Screenshoot" height="500px" >
+</div>
+- Error Response: <b>500</b>
+<div align="center">
+    <img src="readme/GetReflection3.jpg" alt="Screenshoot" height="500px" >
+</div>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+`Edit Reflection`
+
+- URL: /api/v1/reflections/:id
+- Method: PUT
+- Success Response: <b>201</b>
+<div align="center">
+    <img src="readme/EditReflection1.jpg" alt="Screenshoot" height="500px" >
+</div>
+- Error Response: <b>401</b>
+<div align="center">
+    <img src="readme/EditReflection2.jpg" alt="Screenshoot" height="500px" >
+</div>
+- Error Response: <b>403</b>
+<div align="center">
+    <img src="readme/EditReflection3.jpg" alt="Screenshoot" height="500px" >
+</div>
+- Error Response: <b>404</b>
+<div align="center">
+    <img src="readme/EditReflection4.jpg" alt="Screenshoot" height="500px" >
+</div>
+- Error Response: <b>500</b>
+<div align="center">
+    <img src="readme/EditReflection5.jpg" alt="Screenshoot" height="500px" >
+</div>
+
+`Delete Reflection`
+
+- URL: /api/v1/reflections/:id
+- Method: DELETE
+- Success Response: <b>200</b>
+<div align="center">
+    <img src="readme/DeleteReflection1.jpg" alt="Screenshoot" height="500px" >
+</div>
+- Error Response: <b>401</b>
+<div align="center">
+    <img src="readme/DeleteReflection2.jpg" alt="Screenshoot" height="500px" >
+</div>
+- Error Response: <b>403</b>
+<div align="center">
+    <img src="readme/DeleteReflection3.jpg" alt="Screenshoot" height="500px" >
+</div>
+- Error Response: <b>404</b>
+<div align="center">
+    <img src="readme/DeleteReflection4.jpg" alt="Screenshoot" height="500px" >
+</div>
+- Error Response: <b>500</b>
+<div align="center">
+    <img src="readme/DeleteReflection5.jpg" alt="Screenshoot" height="500px" >
+</div>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Anggota Kelompok
