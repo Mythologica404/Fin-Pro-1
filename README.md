@@ -115,8 +115,19 @@ This is an example of how to list things you need to use the software and how to
 `Login`
 
 - URL: /api/v1/users/login
-- Method: GET
-
+- Method: POST
+- Success Response: <b>200</b>
+<div align="center">
+    <img src="readme/Login1.jpg" alt="Screenshoot" height="500px" >
+</div>
+- Error Response: <b>401</b>
+<div align="center">
+    <img src="readme/Login2.jpg" alt="Screenshoot" height="500px" >
+</div>
+- Error Response: <b>500</b>
+<div align="center">
+    <img src="readme/Register2.jpg" alt="Screenshoot" height="500px" >
+</div>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Anggota Kelompok

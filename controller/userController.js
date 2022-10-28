@@ -12,7 +12,7 @@ export const userRegister = async (req, res) => {
 export const userLogin = async (req, res) => {
   const { email, password } = req.body;
   login(email, password).then((data) => {
-    if (data.status !== "error") {
+    if (data.status !== 401) {
       const payload = data?.res;
       const token = jwt.sign({ ...payload }, JWT_Secret, { expiresIn: "24h" });
       res
