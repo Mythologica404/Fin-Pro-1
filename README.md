@@ -30,6 +30,7 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
       </ul>
     </li>
+    <li><a href="#endpoint-testing">Endpoint Testing</a></li>
     <li><a href="#anggota-kelompok">Anggota Kelompok</a></li>
   </ol>
 </details>
